@@ -1,0 +1,35 @@
+<aside class="main-sidebar">
+    
+    <section class="sidebar" style="height: auto;">
+                  
+      <ul class="sidebar-menu">
+        <li class="header"></li>
+        <!--Secao-->        
+           <li class="treeview" *ngFor="let menu of listaMenu">
+              <a href="#">
+                <i class="{{menu.icon}}"></i> <span>{{menu.nome}}</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">                 
+                <li *ngFor="let subMenu of menu.itens">
+                  <a href="#" [routerLink]="subMenu.rota">
+                    <i class="fa fa-circle-o"></i> 
+                    {{ subMenu.nome }}                    
+                    <ul class="treeview-menu" *ngIf="subMenu.subItens">    
+                      <li *ngFor="let submenu2 of subMenu.itens">
+                        <a href="#">
+                        <i class="fa fa-circle-o"></i> 
+                        {{ submenu2.nome }}      
+                        </a>    
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+              </ul>
+           </li>   
+      </ul>
+    </section>   
+  </aside>
+  

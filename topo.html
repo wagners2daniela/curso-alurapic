@@ -1,0 +1,63 @@
+<header class="main-header">
+    <!-- Logo -->
+    <a href="/app/principal" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">
+        <img src="assets/image/simboloBranco.png" />
+      </span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">
+        <img src="assets/image/simboloBranco.png" />routerlink</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!-- <div class="navbar-custom-menu"> -->
+      <ul class="nav justify-content-end ">
+        <!-- Messages: style can be found in dropdown.less messages-menu-->
+        <li class="dropdown  nav-item">
+          <a href="" class="" data-toggle="dropdown">
+            <i class="fa fa-envelope-o"></i>
+            <span class="label label-success">0</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+          </div>
+        </li>
+        <!-- Notifications: style can be found in dropdown.less -->
+        <li class="dropdown notifications-menu nav-item">
+          <a href="#" class="" data-toggle="dropdown">
+            <i class="fa fa-bell-o"></i>
+            <span class="label label-warning">0</span>
+          </a>
+        </li>
+        <!-- Tasks: style can be found in dropdown.less -->
+        <li class="dropdown tasks-menu nav-item">
+          <a href="#" class="" data-toggle="dropdown">
+            <i class="fa fa-flag-o"></i>
+            <span class="label label-danger">0</span>a
+          </a>
+        </li>
+        <li class="dropdown user user-menu nav-item">
+          <a href="#" class="user" data-toggle="dropdown" id="menu-usuario" aria-haspopup="true" aria-expanded="false">
+            <img src="assets/image/{{principal?.usuario + '.png' | lowercase}}" class="user-image img-circle float-left" alt="{{principal?.usuario}}">
+            <span class="d-none d-sm-block float-left ml-2">{{principal?.usuario}}</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-usuario">
+            <div class="user-header">
+              <img src="assets/image/{{principal?.usuario + '.png' | lowercase}}" class="img-circle mx-auto d-block" alt="{{principal?.usuario | titlecase }}">
+              <p class="text-center"> {{principal?.usuario}}<br/>
+                <small></small>
+              </p>
+            </div>
+            <div class="user-footer">
+              <a href="javascript:void()" class="btn btn-default btn-flat" routerLink="/administrativo/usuario-perfil">Perfil</a>
+              <button type="button" class="btn btn-default btn-flat float-right" (click)="logout()"> Sair</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
